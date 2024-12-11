@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Acessórios da Carreta {{ carreta.placa }}</title>
+</head>
+<body>
+    <h1>Acessórios da Carreta {{ carreta.placa }}</h1>
+    <ul>
+        {% for acessorios in acessorios %}
+            <li>{{ acessorio.nome }} - {{ acessorio.descricao }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'listar-carretas' %}" class="btn btn-primary">Voltar</a>
+</body>
+</html>

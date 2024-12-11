@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listagem dos acessorios</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/acessorios-list.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
+</head>
+<style>
+    .header-text {
+        font-family: Arial, sans-serif; /* Fonte Arial */
+        font-size: 38px; /* Tamanho do texto 25px */
+        text-align: center; /* Centralizar texto */
+        font-weight: 600;
+        color: #F2B72F;
+        padding: 0px 20px;
+        z-index: 999;
+        margin-top: 30px;
+        margin-bottom: -50px;
+    }
+</style>
+<body>
+
+    <a href="{% url 'listagens' %}">
+        <button class="back-button" onclick="window.history.back();">
+            <i class="bi bi-arrow-left-circle-fill"></i>
+        </button>
+    </a>
+
+    <img class="footer-image" src="{% static 'img/rodapépreto.jpg' %}">
+    <img class="image1" src="{% static 'img/linhadocabeçalho.jpg' %}">
+    <a href="{% url 'menu' %}">
+        <img class="image3" src="{% static 'img/logoVD_FundoEscuro.png' %}">
+    </a>
+
+
+<div class="container">
+    <table class="table table-dark table-striped">
+        <header class="container header-text">Listagem dos acessorios</header>
+        <thead>
+        <tr>
+            <th class="sticky">PlacaAcc</th>
+            <th>Bottom claro</th>
+            <th>Bottom escuro</th>
+            <th>Bottom Tepar</th>
+            <th>API</th>
+            <th>Enc. Descarga</th>
+            <th>Reg. No dreno</th>
+            <th>Graud bolt Itajaí</th>
+            <th>Olho de gato</th>
+            <th>Mangote</th>
+            <th>Maçarico</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for Acessorios in object_list %}
+            <tr>
+            <td class="sticky cell-frota">{{ acessorios.get_placaacc_display }}</td>
+            <td>{{ acessorios.get_bottomclaro_display }}</td>
+            <td>{{ acessorios.get_bottomescuro_display }}</td>
+            <td>{{ acessorios.get_bottomtepar_display }}</td>
+            <td>{{ acessorios.get_api_display }}</td>
+            <td>{{ acessorios.get_descarga_display }}</td>
+            <td>{{ acessorios.get_dreno_display }}</td>
+            <td>{{ acessorios.get_graudbolt_display }}</td>
+            <td>{{ acessorios.get_olhodegato_display }}</td>
+            <td>{{ acessorios.get_mangote_display }}</td>
+            <td>{{ acessorios.get_macarico_display }}</td>
+            <td>
+                <a href="{% url 'editar-cadastros-acessorios' acessorios.pk %}" class="btn btn-warning btn-sm" title="Editar">Editar</a>
+                <a href="{% url 'excluir-cadastros-acessorios' acessorios.pk %}" class="btn btn-warning btn-sm" title="Excluir">Excluir</a>
+                <a href="{% url 'acessorios-cadastros-acessorios' acessorios.pk %}" class="btn btn-info btn-sm" title="Acessórios">Acessórios</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td class="sticky cell-id" colspan="27">Nenhum campo registrado</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+

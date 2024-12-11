@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/exclusao.css' %}">
+    <title>Excluir Conta</title>
+</head>
+<style>
+    .cancel{
+        margin-top: 30px;
+    }
+</style>
+<body>
+    <form  class="container" action="" method="post">
+        {% csrf_token %}
+        <p>Tem certeza de que deseja excluir sua conta?</p>
+        <button class="cancel" type="submit">Excluir Conta</button>
+    </form>
+</body>
+</html>

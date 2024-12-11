@@ -1,0 +1,176 @@
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Garante que a imagem de fundo fique atrás de outros elementos */
+        }
+        body {
+            font-family: Segoe UI Semibold;
+            background-color: #3a3a3a;
+            font-size: 15px;
+        }
+        .footer-image {
+            width: 1920px;
+            height: 90px;
+            position: absolute;
+            bottom: 830px;
+            top: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+        }
+        .image1 {
+            width: 100%;
+            height: 5px;
+            top: 85px;
+            left: 0%;
+            position:absolute;
+            z-index: 999;
+        }
+        .image2 {
+            width: 430px;
+            height: auto;
+            top: 08px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            z-index: 999;
+        }
+        .image3 {
+            width: 230px;
+            height: auto;
+            top: 30px;
+            left: 25px;
+            position: absolute;
+            z-index: 999;
+            transition: transform 0.2s;
+        }
+        .image3:hover{
+            transform: scale(1.04);
+            transition: 0.2s;
+        }
+        .botao1 button {
+            position: fixed;
+            top: 79%;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: #F3B62F;
+            color: black;
+            border: 4px solid black;
+            border-radius: 25px;
+            width: 280px;
+            height: 78px;
+            font-size: 30px;
+            font-family: 'Segoe UI Semibold';
+            margin-left: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 0px black;
+            transition: transform 0.2s
+        }
+        .botao1 button:hover {
+            transform: translate(-50%) scale(1.03);
+            transition: 0.2s;
+        }
+
+        .container1 {
+            max-width: 900px;
+            top: 15%;
+            left: 22%;
+            position: fixed;
+        }
+
+        .container2 {
+            max-width: 900px;
+            top: 20%;
+            left: 52%;
+            position: fixed;
+        }
+
+        .project {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            margin-bottom: 30px;
+            transition: transform 0.5s, background-color 0.3s, color 0.3s;
+            font-size: 16px;
+            height: 100px;
+            width: 500px;
+            color: #fff;
+
+        }
+
+        .project h2 {
+            margin-top: 0px;
+            font-weight: 700
+            color
+        }
+
+        .project h2:hover{
+            color
+        }
+
+        .project p {
+            margin-top: 15px;
+        }
+
+        .project:hover{
+            transform: scale(1.03);
+            transition: 0.5s;
+            background-color: #DDDDDD;
+            color: black;
+        }
+
+
+        .quadrado{
+            position: fixed;
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 5%;
+            font-size: 10px;
+            align-itens: center;
+            top: 95%;
+            text-align: center;
+            bottom: 0;
+            padding: 16px;
+            z-index: -1;
+        }
+
+        .direitos{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .acesso{
+            color: goldenrod;
+            margin-top: 20px;
+        }
+
+        h1{
+            text-align: center;
+            color: black;
+            margin-top: -5px;
+        }
+
+        .botao5{
+            margin-left: 35%;
+            margin-top: 5%;
+            background-color: #F2B72F;
+            color: black;
+            border-radius: 5px;
+            border: solid black 1px;
+            transition: 0.5s;
+    ]
+        .botao5:hover {
+            transform: scale(1.03);
+            transition: 0.5s;
+            background-color: goldenrod;
+        }

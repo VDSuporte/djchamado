@@ -1,0 +1,78 @@
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/form-carretas.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Cadastro de Carretas</title>
+</head>
+<body>
+
+    <a href="{% url 'menu' %}">
+        <button class="back-button" onclick="window.history.back();">
+            <i class="bi bi-arrow-left-circle-fill"></i>
+        </button>
+    </a>
+
+    <img class="footer-image" src="{% static 'img/rodapépreto.jpg' %}">
+    <img class="image1" src="{% static 'img/linhadocabeçalho.jpg' %}">
+    <a href="{% url 'menu' %}">
+        <img class="image3" src="{% static 'img/logoVD_FundoEscuro.png' %}">
+    </a>
+
+
+    <div class="container form-background">
+        <form action="" method="post">
+            <header class="container header-text">Cadastro de Carretas</header>
+
+            {% csrf_token %}
+
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Primeira coluna de campos do formulário -->
+                    {{ form.frota|as_crispy_field }}
+                    {{ form.placa|as_crispy_field }}
+                    {{ form.motorista|as_crispy_field }}
+                    {{ form.renavam|as_crispy_field }}
+                    {{ form.anomod|as_crispy_field }}
+                    {{ form.cor|as_crispy_field }}
+                    {{ form.chassi|as_crispy_field }}
+                    {{ form.crlv|as_crispy_field }}
+                    {{ form.marca|as_crispy_field }}
+                    {{ form.modelo|as_crispy_field }}
+                    {{ form.eixos|as_crispy_field }}
+                    {{ form.pneus|as_crispy_field }}
+                    {{ form.suspensao|as_crispy_field }}
+                </div>
+                <div class="col-md-6">
+                    <!-- Segunda coluna de campos do formulário -->
+                    {{ form.altura|as_crispy_field }}
+                    {{ form.pbt|as_crispy_field }}
+                    {{ form.toneladas|as_crispy_field }}
+                    {{ form.litros|as_crispy_field }}
+                    {{ form.tipo|as_crispy_field }}
+                    {{ form.tara|as_crispy_field }}
+                    {{ form.suspensor|as_crispy_field }}
+                    {{ form.bolsa|as_crispy_field }}
+                    {{ form.mola|as_crispy_field }}
+                    {{ form.locada|as_crispy_field }}
+                    {{ form.transportadora|as_crispy_field }}
+                    {{ form.notafiscal|as_crispy_field }}
+                    {{ form.status|as_crispy_field }}
+                </div>
+            </div>
+
+            <button type="submit" class="container btn btn-outline-warning">Cadastrar</button>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

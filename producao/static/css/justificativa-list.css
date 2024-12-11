@@ -1,0 +1,163 @@
+
+body {
+    background-color: #3A3A3A;
+    color: white;
+    overflow-x: hidden; /* Rolagem horizontal */
+}
+.table thead th {
+    background-color: #F2B72F; /* Cor do cabeçalho da tabela */
+    color: black; /* Cor do texto do cabeçalho */
+    font-size: 18px;
+}
+.table {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px; /* Espaçamento superior */
+    width: auto; /* Largura automática para a tabela */
+    overflow-x: hidden; /* Rolagem horizontal */
+    display: block; /* Exibição em bloco para a tabela */
+    border: solid black 1px;
+    margin-bottom: 100px;
+
+}
+.table th, .table td {
+    min-width: 100px; /* Largura mínima para as colunas */
+    white-space: nowrap; /* Impede quebra de linha dentro das células */
+}
+.nav-link-inicio {
+    color: #F2B72F; /* Cor do texto */
+    font-size: 18px; /* Tamanho do texto */
+    padding: 0px; /* Espaçamento interno */
+    margin-right: 10px; /* Espaçamento à direita */
+    margin-top: -35px;
+}
+.nav-link-link {
+    color: #F2B72F; /* Cor do texto */
+    font-size: 18px; /* Tamanho do texto */
+    padding: 0px; /* Espaçamento interno */
+    margin-right: 10px; /* Espaçamento à direita */
+    margin-top: -35px;
+}
+.table thead th.sticky,
+.table tbody td.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #343a40; /* Cor de fundo das colunas fixas */
+    color: white; /* Cor do texto das colunas fixas */
+    z-index: 2; /* Garante que as colunas fixas fiquem sobre as outras */
+}
+.table thead th.sticky:nth-child(1),
+.table tbody td.sticky.cell-id {
+    top: 0; /* Fixa o cabeçalho das colunas no topo */
+    z-index: 3; /* Garante que o cabeçalho fique acima das células */
+    left: 0; /* Fixa a primeira coluna à esquerda */
+    background-color: #2C3034; /* Cor de fundo para a célula ID */
+    color: white; /* Cor do texto para a célula ID */
+}
+.table thead th.sticky:nth-child(2),
+.table tbody td.sticky.cell-frota {
+    top: 0; /* Fixa o cabeçalho das colunas no topo */
+    z-index: 3; /* Garante que o cabeçalho fique acima das células */
+    left: 100px; /* Fixa a segunda coluna à esquerda */
+    background-color: #2C3034; /* Cor de fundo para a célula Frota */
+    color: white; /* Cor do texto para a célula Frota */
+}
+.table thead th.sticky:nth-child(3){
+    top: 0; /* Fixa o cabeçalho das colunas no topo */
+    z-index: 3; /* Garante que o cabeçalho fique acima das células */
+    left: 200px; /* Fixa a terceira coluna à esquerda */
+    background-color: #2C3034; /* Cor de fundo para a célula Placa */
+    color: white; /* Cor do texto para a célula Placa */5
+}
+.table tbody td.sticky.cell-placa {
+    top: 0; /* Fixa o cabeçalho das colunas no topo */
+    z-index: 3; /* Garante que o cabeçalho fique acima das células */
+    left: 200px; /* Fixa a terceira coluna à esquerda */
+    background-color: #2C3034; /* Cor de fundo para a célula Placa */
+    color: white; /* Cor do texto para a célula Placa */
+}
+.table tbody td {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória entre as células */
+}
+.footer-image {
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    bottom: 830px;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+.image1 {
+    width: 100%;
+    height: 3px;
+    top: 75px;
+    left: 0%;
+    position: absolute;
+    z-index: -1;
+}
+.image3 {
+    width: 210px;
+    height: auto;
+    top: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 999;
+    transition: transform 0.2s;
+}
+
+.back-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    margin-left: 1%;
+    outline: none;
+    z-index: 999;
+}
+
+.back-button i {
+    font-size: 30px; /* Ajuste o tamanho do ícone conforme necessário */
+    outline: none;
+}
+
+.back-button:hover {
+    background-color: transparent;
+    color: #F2B72F;
+    outline: none;
+}
+
+.back-button:active {
+    background-color: black;
+    outline: none;
+    border: solid black 2px;
+}
+
+@media screen and (max-width: 600px) {
+    .table{
+        width: 95%;
+        overflow: hidden; /* Rolagem horizontal */
+    }
+}
+.header-text {
+    font-family: Arial, sans-serif; /* Fonte Arial */
+    font-size: 38px; /* Tamanho do texto 25px */
+    text-align: center; /* Centralizar texto */
+    font-weight: 600;
+    color: #F2B72F;
+    padding: 0px 20px;
+    z-index: 999;
+    margin-top: 30px;
+    margin-bottom: -50px;
+}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <p class="title">Alterar nome</p>
+    <label for="new_username">Novo Nome de Usuário:</label>
+    <input type="text" name="new_username" id="new_username" autocomplete="off" required>
+    <button class="sign" type="submit">Alterar</button>
+</form>
+{% endblock %}

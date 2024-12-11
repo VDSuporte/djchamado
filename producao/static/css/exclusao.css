@@ -1,0 +1,120 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-size: 100%;
+        font-family: Segoe UI Semibold;
+        background-color: #3a3a3a;
+        font-size: 15px;
+        position: relative; /* Adicionado */
+        overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+        overflow: hidden;
+    }
+  .footer-image {
+        width: 100%;
+        height: 75px;
+        position: absolute;
+        bottom: 830px;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    .image1 {
+        width: 100%;
+        height: 3px;
+        top: 75px;
+        left: 0%;
+        position: absolute;
+        z-index: -1;
+    }
+    .image3 {
+        width: 210px;
+        height: auto;
+        top: 23px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        z-index: 999;
+        transition: transform 0.2s;
+    }
+    .enter {
+        position: fixed;
+        width: 80%;
+        margin-top: 3%;
+        left: 10%;
+        background-color: #F3B62F;
+        color: black;
+        border: 1px solid #666666;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 17px;
+        cursor: pointer;
+        transition: transform 0.2s
+        margin-bottom: 100px;
+        transition: 0.5s;
+    }
+    .enter:hover {
+        transform: scale(1.03);
+        transition: 0.5s;
+    }
+    .cancel {
+        position: fixed;
+        width: 80%;
+        margin-top: 12%;
+        left: 10%;
+        background-color: #F3B62F;
+        color: black;
+        border: 1px solid #666666;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 17px;
+        cursor: pointer;
+        transition: transform 0.2s
+        margin-bottom: 100px;
+        transition: 0.5s;
+    }
+    .cancel:hover {
+        transform: scale(1.03);
+        transition: 0.5s;
+    }
+
+    .text{
+        margin-top: -5%;
+    }
+
+    .container {
+        background-color: #666666;
+        padding: 55px;
+        font-size: 28px;
+        width: 350px%;
+        height: 220px;
+        top: 50%;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        border: solid black 1px;
+        border-radius: 10px;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 800px) {
+        .container{
+            width: 85%;
+            height: 28%;
+        }
+        .text{
+            font-size: 25px;
+        }
+
+        .enter {
+            margin-top: 20px;
+        }
+
+        .cancel{
+            margin-top: 70px;
+        }
+    }

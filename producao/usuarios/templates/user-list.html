@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Usuários</title>
+    <style>
+        body {
+            background-color: #666666;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Faz com que o body ocupe pelo menos a altura total da viewport */
+            margin: 0; /* Remove margens padrão */
+            position: relative; /* Necessário para posicionamento absoluto dos elementos internos */
+        }
+
+        .footer-image {
+            width: 100%;
+            height: 75px;
+            position: absolute;
+            bottom: 830px;
+            top: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+        }
+
+        .image1 {
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            top: 75px;
+            left: 0;
+            z-index: 999;
+        }
+
+        .image2 {
+            width: 350px;
+            height: auto;
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+        }
+
+        .image3 {
+            width: 200px;
+            height: auto;
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            transition: transform 0.2s;
+        }
+
+        .table {
+            background-color: #ccc;
+            border: solid black 2px;
+            padding: 5px;
+            border-collapse: collapse;
+            margin-top: -500px;
+        }
+
+        th {
+            padding: 10px 0px;
+            border: solid black 2px;
+            font-size: 22px;
+            font-weight: 700;
+            background-color: #F2B72F;
+            width: 312px;
+        }
+
+        td {
+            padding: 10px 0px;
+            width: 300px;
+            border: solid black 2px;
+            font-size: 18px;
+            color: white;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #2C3034; /* Cor de fundo para linhas pares */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #212529; /* Cor de fundo para linhas ímpares */
+        }
+    </style>
+</head>
+<body>
+
+    <img class="footer-image" src="{% static 'img/rodapépreto.jpg' %}">
+    <img class="image1" src="{% static 'img/linhadocabeçalho.jpg' %}">
+    <img class="image3" src="{% static 'img/logoVD_FundoEscuro.png' %}">
+
+    <table class="table" border="1">
+        <tr>
+            <th>Nome de Usuário</th>
+            <th>Email</th>
+            <th>Último Login</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.last_login|date:"d/m/Y H:i" }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
